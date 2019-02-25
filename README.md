@@ -10,4 +10,7 @@ This app contains:
 To work you need to use this PR of the fuselibs (https://github.com/fuse-open/fuselibs/pull/1253). 
 For more information visit https://medium.com/@andrewq/hello-world-eaa996c594b7
 
+
+Remember to change the path of .unoconfig to your fuselibs/Source folder 
+
 (https://fuseopen.com/)
