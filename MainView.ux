@@ -67,16 +67,12 @@
                 </WhileActive>
                 
                 <Grid>
-					<SavePanel ux:Name="SavePanel1" Background="#8b3626" Clicked="{saveCustomPanel1}">
-						<Text Value="SHARE PANEL 1" TextColor="White" Alignment="VerticalCenter" TextAlignment="Center" />
+					<SavePanel ux:Name="SavePanel1" Background="#87ceff" Clicked="{saveCustomPanel1}">
+						<Text Value="CLICK TO SHARE" TextColor="White" Alignment="VerticalCenter" TextAlignment="Center" />
 					</SavePanel>
 
-					<SavePanel ux:Name="SavePanel2" Background="#87ceff" Clicked="{save2}">
-						<Text Value="SHARE PANEL 2" TextColor="White" Alignment="VerticalCenter" TextAlignment="Center" />
-					</SavePanel>
-
-					<SavePanel ux:Name="SavePanel3" Background="#ff9b6b" Clicked="{save3}">
-						<Text Value="SHARE PANEL 3" TextColor="White" Alignment="VerticalCenter" TextAlignment="Center" />
+					<SavePanel ux:Name="SavePanel2" Background="#ff9b6b" Clicked="{saveCustomPanel2}">
+						<Text Value="CLICK TO SHARE" TextColor="White" Alignment="VerticalCenter" TextAlignment="Center" />
 					</SavePanel>
 				</Grid>
             </Page>
