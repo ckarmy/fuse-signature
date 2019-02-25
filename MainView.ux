@@ -1,14 +1,31 @@
 <App>
-	<JavaScript>
-		exports.save = function () {
-			sp.save("test.png");
-		}
-	</JavaScript>
-	<Panel Width="100%" Height="100%">
-		<SavePanel Background="#ffff" ux:Name="sp" Alignment="Center" Width="100%" Height="100%">
-					<Signature ux:Name="sign" Alignment="Center" Width="100%" Height="100%" ClipToBounds="true"/>
-					<Image Url="https://img.ogol.io/fusetools.com/ntebc1.png?w=1920&amp;h=460&amp;padding=0.1" />
-		</SavePanel>
-		<Button Text="SAVE!" Clicked="{save}" />
-	</Panel>
+	<JavaScript File="MainView.js" />
+
+	<DockPanel Width="100%" Height="100%">
+		<Panel Dock="Top" Padding="10" Background="#000">
+			<Text Value="Signature Pad" TextAlignment="Center" TextColor="White" />
+		</Panel>
+
+		<Panel>
+			<SavePanel Background="#fff" ux:Name="sp" Alignment="Center" Width="100%" Height="100%">
+				<SolidColor Color="#E4E4E4"/>
+				<Signature ux:Name="Mysign" Alignment="Center" Width="100%" Height="100%" ClipToBounds="true"/>
+			</SavePanel>
+		</Panel>
+
+		<Grid Dock="Bottom" Columns="1*,1*,1*" Height="50" Background="#444">
+			<Panel Clicked="{getPath}">
+				<Text Alignment="VerticalCenter" Value="GET PATH" TextAlignment="Center" TextColor="White" />
+			</Panel>
+
+			<!-- TODO: CLEAR WHEN I CLICK, NOT WHEN I START DRAWING AGAIN AFTER PRESS THE BUTTON -->
+			<Panel Clicked="{clear}">
+				<Text Alignment="VerticalCenter" Value="CLEAR" TextAlignment="Center" TextColor="White" />
+			</Panel>
+
+			<Panel Clicked="{save}">
+				<Text Alignment="VerticalCenter" Value="SAVE!" TextAlignment="Center" TextColor="White" />
+			</Panel>
+		</Grid>
+	</DockPanel>
 </App>
