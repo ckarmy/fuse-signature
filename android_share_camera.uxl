@@ -1,5 +1,0 @@
-<Extensions Backend="CPlusPlus">
-
-	<CopyFile Condition="Android" Name="android_share_camera_paths.xml" TargetName="app/src/main/res/xml/android_share_camera_paths.xml" />
-
-</Extensions>

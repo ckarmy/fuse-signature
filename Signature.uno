@@ -157,11 +157,13 @@ public class Signature : Fuse.Controls.Panel
     }
 
     void CreateVerts(float2 size, float2 pos) {
-        _verts = _lines.ToArray();
-        for (var i = 0; i < _lines.Count; i++) {
-            _verts[i] = ConvertPoint(_verts[i] + pos, size);
+        if(_lines.Count > 0) {
+        	_verts = _lines.ToArray();
+        	for (var i = 0; i < _lines.Count; i++) {
+	            _verts[i] = ConvertPoint(_verts[i] + pos, size);
+	        }
+	        _vertcount = _lines.Count;
         }
-        _vertcount = _lines.Count;
     }
 
     protected override void DrawVisual(DrawContext dc)

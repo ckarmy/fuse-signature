@@ -1,0 +1,22 @@
+{
+  "name": "subcargo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "MainView.js",
+  "devDependencies": {},
+  "scripts": {
+    "uno": "node_modules/.bin/uno",
+    "android": "uno build -t=android -r",
+    "androidRelease": "uno build -t=android --configuration=Release",
+    "ios": "uno build ios --run",
+    "iosRelease": "uno build -t=iOS -DCOCOAPODS -d --configuration=Release",
+    "dotnet": "uno build dotnet --run",
+    "native": "uno build native --run"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fuse-open/fuselibs": "^1.13.0",
+    "@fuse-open/uno": "^1.13.2"
+  }
+}
