@@ -26,7 +26,7 @@ public class SignatureJS : NativeModule
 		var name = args[0] as string;
 			
 		SavePanel sp;
-		if(SavePanels.TryGetValue(name,out sp))
+		if(SavePanels.TryGetValue(name, out sp))
 		{
 			return sp.GetPath();
 		}

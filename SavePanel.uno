@@ -158,7 +158,8 @@ public class SavePanel : Fuse.Controls.Panel
 				memcpy(dst, src, pitch);
 			}
 
-			uImage::Png::Save(uStringToXliString(path), bmp);
+			uCString temp(path);
+			uImage::Png::Save(temp.Ptr, bmp);
 			delete bmp;
 /*		}
 		catch (const uBase::Exception &e)
