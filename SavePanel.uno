@@ -28,7 +28,7 @@ public class SavePanel : Fuse.Controls.Panel
         _instance = this;
 
 		ScriptClass.Register(typeof(SavePanel),
-			new ScriptMethod<SavePanel>("save", Save, ExecutionThread.MainThread));
+			new ScriptMethod<SavePanel>("save", Save));
 	}
 
 	public string GetPath()
@@ -36,7 +36,7 @@ public class SavePanel : Fuse.Controls.Panel
     	return imagePath;
     }
 
-	static void Save(Context c, SavePanel s, object [] args) {
+	static void Save(SavePanel s, object[] args) {
 		if (args.Length != 1)
 		{
 			Fuse.Diagnostics.UserError( "SavePanel.save requires 1 parameter (filename)", s );
