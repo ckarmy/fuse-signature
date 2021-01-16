@@ -30,11 +30,11 @@ public class Signature : Fuse.Controls.Panel
         if(_valid)
         {
            ScriptClass.Register(typeof(Signature),
-            new ScriptMethod<Signature>("clear", ClearDrawing, ExecutionThread.MainThread));
+            new ScriptMethod<Signature>("clear", ClearDrawing));
         }
     }
 
-    public void ClearDrawing(Context c, Signature s, object[] args)
+    public void ClearDrawing(Signature s, object[] args)
     {
         ClearSignature = true;
     }
